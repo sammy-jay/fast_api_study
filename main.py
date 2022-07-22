@@ -21,3 +21,15 @@ def create_item(item: Item, item_id: str):
         "item": item,
         "item_id": item_id
     }
+
+@app.get("/items/{item_id}")
+def getSingleItem(item_id: str):
+    return {
+        "item": item,
+        "item_id": item_id
+    }
+
+@app.get("/")
+def getAllItems():
+    return "items"
+
